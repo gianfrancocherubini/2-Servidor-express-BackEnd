@@ -105,7 +105,7 @@ class ProductManager {
       
             productos.splice(productIndex, 1);
       
-            await fs.writeFile(this.path, JSON.stringify(productos, null, 2));
+            await fs.promises.writeFile(this.path, JSON.stringify(productos, null, 2));
       
             console.log("Producto eliminado con éxito.");
         } catch (error) {
