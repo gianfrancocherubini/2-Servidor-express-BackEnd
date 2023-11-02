@@ -36,7 +36,7 @@ app.get('/products/:pid', async (req, res) => {
   
       if (product) {
         res.setHeader('Content-Type', 'application/json');
-        res.json({ product });
+        res.status(200).json({ product });
       } else {
         res.status(404).json({ error: 'Producto no encontrado' });
       }
