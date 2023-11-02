@@ -9,8 +9,8 @@ class ProductManager {
 
     async getProducts() {
         if (fs.existsSync(this.path)) { 
-          const data = await fs.promises.readFile(this.path, 'utf-8');
-          return JSON.parse(data);
+            let data = await fs.promises.readFile(this.path, 'utf-8');
+            return JSON.parse(data);
         } else {
             return [];
         }
@@ -58,8 +58,8 @@ class ProductManager {
 
     async getProductById(id) {
         try {
-            const productos = await this.getProducts();
-            const product = productos.find(product => product.id === id);
+            let productos = await this.getProducts();
+            let product = productos.find(product => product.id === id);
       
             if (product) {
                 console.log("El producto encontrado es:", product);
@@ -73,15 +73,15 @@ class ProductManager {
 
     async updateProduct(id, fieldToUpdate, newValue) {
         try {
-            const productos = await this.getProducts();
-            const productIndex = productos.findIndex(product => product.id === id);
+            let productos = await this.getProducts();
+            let productIndex = productos.findIndex(product => product.id === id);
       
             if (productIndex === -1) {
                 console.log("Producto no encontrado.");
                 return;
             }
       
-            const updatedProduct = { ...productos[productIndex] };
+            let updatedProduct = { ...productos[productIndex] };
             updatedProduct[fieldToUpdate] = newValue;
             productos[productIndex] = updatedProduct;
       
@@ -95,8 +95,8 @@ class ProductManager {
 
     async deleteProduct(id) {
         try {
-            const productos = await this.getProducts();
-            const productIndex = productos.findIndex(product => product.id === id);
+            let productos = await this.getProducts();
+            let productIndex = productos.findIndex(product => product.id === id);
       
             if (productIndex === -1) {
                 console.log("Producto no encontrado. No se puede eliminar.");
