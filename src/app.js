@@ -11,11 +11,11 @@ app.get(`/`, (req, res)=> {
 
 app.get('/products', async (req, res) => {
   try {
-    const limit = req.query.limit;
-    const products = await pm.getProducts();
+    let limit = req.query.limit;
+    let products = await pm.getProducts();
 
     if (limit) {
-      const limitedProducts = products.slice(0, parseInt(limit, 10));
+      let limitedProducts = products.slice(0, parseInt(limit, 10));
       res.setHeader('Content-Type', 'application/json');
       res.json({ products: limitedProducts });
     } else {
@@ -30,8 +30,8 @@ app.get('/products', async (req, res) => {
 
 app.get("/products/:pid", async (req, res) => {
     try {
-      const productId = req.params.pid;
-      const product = await pm.getProductById(productId);
+      let productId = req.params.pid;
+      let product = await pm.getProductById(productId);
   
       if (product) {
         res.setHeader("Content-Type", "application/json");
