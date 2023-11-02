@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Zapatilla 1",
+    "description": "Zapatilla deportiva",
+    "price": 76000,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12344",
+    "stock": 780
+  },
+  {
+    "id": 2,
+    "title": "Zapatilla 2",
+    "description": "Zapatilla deportiva",
+    "price": 21000,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12345",
+    "stock": 70
+  },
+  {
+    "id": 3,
+    "title": "Zapatilla 3",
+    "description": "Zapatilla deportiva",
+    "price": 5400,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12346",
+    "stock": 30
+  },
+  {
+    "id": 4,
+    "title": "Zapatilla 4",
+    "description": "Zapatilla deportiva",
+    "price": 73000,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12347",
+    "stock": 650
+  },
+  {
+    "id": 5,
+    "title": "Zapatilla 5",
+    "description": "Zapatilla deportiva",
+    "price": 76000,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12348",
+    "stock": 760
+  },
+  {
+    "id": 6,
+    "title": "Zapatilla 6",
+    "description": "Zapatilla deportiva",
+    "price": 6000,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12349",
+    "stock": 320
+  },
+  {
+    "id": 7,
+    "title": "Zapatilla 7",
+    "description": "Zapatilla deportiva",
+    "price": 54000,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12340",
+    "stock": 540
+  },
+  {
+    "id": 8,
+    "title": "Zapatilla 8",
+    "description": "Zapatilla deportiva",
+    "price": 2000,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12341",
+    "stock": 40
+  },
+  {
+    "id": 9,
+    "title": "Zapatilla 9",
+    "description": "Zapatilla deportiva",
+    "price": 22000,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12342",
+    "stock": 510
+  },
+  {
+    "id": 10,
+    "title": "Zapatilla 10",
+    "description": "Zapatilla deportiva",
+    "price": 3000,
+    "thumbnail": "https://www.nike.com.ar/zapatillas-nike-air-max-dawn-dr2395-100/p",
+    "code": "AA12343",
+    "stock": 5
+  }
+]
