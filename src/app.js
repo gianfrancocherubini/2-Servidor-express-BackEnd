@@ -1,12 +1,13 @@
 const express = require("express")
-const app = express()
+const app = express() 
 const ProductManager = require(`./productManager`)
 const pm = new ProductManager(`./src/products.json`)
 const PORT = 3000
 
 
-app.get(`/`, (req, res)=> {
-    res.send("Estamos desarrollando con Express")
+app.get('/', (req, res)=> {
+    res.setHeader('Content-Type','tenx/plain')
+    res.status(200).send('OK')
 })
 
 app.get('/products', async (req, res) => {
@@ -28,20 +29,20 @@ app.get('/products', async (req, res) => {
   }
 });
 
-app.get("/products/:pid", async (req, res) => {
+app.get('/products/:pid', async (req, res) => {
     try {
       let productId = req.params.pid;
       let product = await pm.getProductById(productId);
   
       if (product) {
-        res.setHeader("Content-Type", "application/json");
+        res.setHeader('Content-Type', 'application/json');
         res.json({ product });
       } else {
-        res.status(404).json({ error: "Producto no encontrado" });
+        res.status(404).json({ error: 'Producto no encontrado' });
       }
     } catch (error) {
       console.error(error);
-      res.status(500).json({ error: "Error al obtener el producto" });
+      res.status(500).json({ error: 'Error al obtener el producto' });
     }
   });
   
