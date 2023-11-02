@@ -18,10 +18,10 @@ app.get('/products', async (req, res) => {
     if (limit) {
       let limitedProducts = products.slice(0, parseInt(limit, 10));
       res.setHeader('Content-Type', 'application/json');
-      res.json({ products: limitedProducts });
+      res.status(200).json({ products: limitedProducts });
     } else {
       res.setHeader('Content-Type', 'application/json');
-      res.json({ products });
+      res.status(200).json({ products });
     }
   } catch (error) {
     console.error(error);
