@@ -56,20 +56,37 @@ class ProductManager {
         }
     }
 
-    async getProductById(id) {
-        try {
-            let productos = await this.getProducts();
-            let product = productos.find(product => product.id === id);
-      
-            if (product) {
-                console.log("El producto encontrado es:", product);
-            } else {
-                console.log("Producto no encontrado");
-            }
-        } catch (error) {
-          console.error("Error al obtener productos:", error);
-        }
+async getProductById(id) {
+
+    try {
+
+      let productos = await this.getProducts();
+
+      let product = productos.find(product => product.id === Number(id)); // convertir a number el id recibido por params
+
+      console.log("pro",product);
+
+      if (product) {
+
+        console.log("El producto encontrado es:", product);
+
+        //si lo encuentra se debe retornar, sino el método no va devolver nada y en el endpoint va creer que no existe el producto
+
+        return product
+
+      } else {
+
+        console.log("Producto no encontrado");
+
+      }
+
+    } catch (error) {
+
+     console.error("Error al obtener productos:", error);
+
     }
+
+  }
 
     async updateProduct(id, fieldToUpdate, newValue) {
         try {
